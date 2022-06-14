@@ -1,0 +1,22 @@
+.buttons{
+    display:grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.container{
+    width:40%;
+    height: 200%;
+    padding: 5%;
+}
+.button{
+    border: 0.1px solid black;
+}
+.button:hover{
+    background-color: rgb(213, 212, 212);
+}
+#display{
+    text-align: right;
+    height: 50px;
+    
+    border: 1px solid black;
+}

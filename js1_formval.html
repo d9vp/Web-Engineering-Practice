@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: red;
+        }
+        @media only screen and (min-width: 300px) and (max-width: 800px){
+            body{
+                background-color:blue;
+            }
+        }
+    </style>
+    <title>Form Validation</title>
+    <script>
+        function formVal() {
+            let fname= document.getElementById("fname").value;
+            let ref= '^[A-Za-z]{3,25}$'
+            if(fname.match(ref)){
+            }
+            else{
+                alert("Enter valid name.")
+            }
+            let email=document.getElementById("mail").value;
+            let ree='^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[a-z]{2,3}$'
+            if(email.match(ree)){
+            }
+            else{
+                alert("Enter valid email");
+            }
+            let pass = document.getElementById("pass").value;
+            let rep="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"
+                 
+            if(pass.match(rep)){
+                alert("Form submitted successfully")
+            }
+            else{
+                alert("Pass-1cap 1 sm and 1 num")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div align="center">
+        <form action="#">
+        <label>First Name</label>
+        <input type="text" id="fname">
+        <br><br>
+        <label>Last Name</label>
+        <input type="text" id="lname">
+        <br><br>
+        <label>E-mail</label>
+        <input type="email" id="mail">
+        <br><br>
+        <label>Password</label>
+        <input type="password" id="pass">
+        
+        <label>Course</label>
+        <select name="course" id="course">
+            <option value="Comps">Computer Engineering</option>
+            <option value="IT">Information Technology</option>
+            <option value="DS">Computer Science and Technology (Data Science)</option>
+        </select>
+        <button type="submit" onclick="formVal()">Submit</button>
+    </form>
+    </div>
+</body>
+
+</html>

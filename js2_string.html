@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function operation(){
+            let ogstring = document.getElementById("input").value;
+            let pattern = document.getElementById("pattern").value;
+            let replacewith = document.getElementById("repl").value;
+            let re = RegExp(String.raw`${pattern}`,"g");
+            let n = ogstring.match(re);
+            let final = ogstring.replace(re,replacewith);
+            document.getElementById("count").innerHTML="Count of substring was: "+n.length;
+            document.getElementById("replaced").innerHTML="New string: "+final;
+        }
+    </script>
+</head>
+<body>
+    
+        <label>Enter String: </label>
+        <input type="text" id="input">
+        <br>
+        <label>Enter Substring to find: </label>
+        <input type="text" id="pattern">
+        <br>
+        <label>To replace with: </label>
+        <input type="text" id="repl">
+        <br>
+        <button onclick="operation()">Perform Operation</button>
+        <p id="count"></p>
+        <p id="replaced"></p>
+    
+</body>
+</html>

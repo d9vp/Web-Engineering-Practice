@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const operation=()=>{
+            let textlist = document.getElementById("text").value;
+            let split = textlist.split(" ");
+            let list = split.map((num)=>new Number(num));
+            function double(n){
+                return n*2;
+            }
+            let l2 = list.map(double);
+            document.getElementById("result").innerHTML= "Doubled list: "+l2;
+        }
+    </script>
+</head>
+<body>
+    <label >Enter list:</label>
+    <input type="text" id="text">
+    <br><br>
+    <button type="submit" onclick="operation()">Double list elements</button>
+    <p id="result"></p> 
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: red;
+        }
+        @media only screen and (min-width: 300px) and (max-width: 800px){
+            body{
+                background-color:blue;
+            }
+        }
+    </style>
+    <title>Form Validation</title>
+    <script>
+        function countlist(){
+            let el = document.getElementById("courses");
+            let n = el.length;
+            els=[]
+            for(i=0;i<n;i++){
+                els.push((el[i].innerHTML));
+            }
+            alert("choices"+els+"Number of choices: "+n);
+        }
+    </script>
+</head>
+
+<body>
+    <div align="center">
+        <form action="#">
+        
+        <label>Course</label>
+        <select name="course" id="courses">
+            <option value="Comps" class="choice">Computer Engineering</option>
+            <option value="IT" class="choice">Information Technology</option>
+            <option value="DS" class="choice">Computer Science and Technology (Data Science)</option>
+        </select>
+        <button type="submit" onclick="countlist()">Submit</button>
+    </form>
+    </div>
+</body>
+
+</html>

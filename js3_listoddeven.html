@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const oddeven=()=>{
+            let text = document.getElementById("text").value;
+            let split = text.split(" ")
+            let list = split.map((num) => new Number(num))
+            let odd=[]
+            let even=[]
+            let n = list.length
+            for(i=0;i<n;i++){
+                if(list[i]%2==0)
+                    even.push(list[i]);
+                else    
+                    odd.push(list[i]);
+            }
+            document.getElementById("odd").innerHTML= "Odd numbers: "+odd;
+            document.getElementById("even").innerHTML="Even numbers: "+even;
+        }
+    </script>
+</head>
+<body>
+    <label >Enter list:</label>
+    <input type="text" id="text">
+    <br><br>
+    <button type="submit" onclick="oddeven()">Find Odd Even</button>
+    <p id="odd"></p> 
+    <p id="even"></p>
+</body>
+</html>
